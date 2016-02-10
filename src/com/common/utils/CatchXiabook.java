@@ -1,9 +1,20 @@
 package com.common.utils;
 
 import java.io.File;
+<<<<<<< HEAD
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+=======
+import java.util.List;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.nodes.Node;
+import org.jsoup.select.Elements;
+
+>>>>>>> origin/master
 
 public class CatchXiabook extends BaseCatch {
 
@@ -129,7 +140,52 @@ public class CatchXiabook extends BaseCatch {
 		return null;
 	}
 	
+<<<<<<< HEAD
 	public static void main(String[] args) throws Exception {
+=======
+	
+	
+	public static void main(String[] args) throws Exception {
+		
+
+		BaseUtil.downloadURLContent("http://www.xuanshu.com//d/file/soft/sort01/sort016/2015-10-12/e318df90b8b3b5232438ac46e3c2fc26.jpg", "D:\\Desktop");
+		
+		int aa= 0 ;
+		if(aa == 0){
+			return;
+		}
+		
+		
+		String pageUrl = "http://www.xuanshu.com/soft/sort01/";
+		Document doc =  Jsoup.connect(pageUrl).
+		 header("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36")
+		 .get();
+//		Element[]list = 
+		Elements list = doc.getElementsByClass("listBox").get(0).getElementsByTag("li");
+		
+		for(Element element : list){
+			String name = element.getElementsByClass("s").get(0).child(3).text();
+			//String size = 
+			element.getElementsByClass("s").get(0).childNodes();
+			List<Node> chEls = element.getElementsByClass("s").get(0).childNodes();//child(8).text();
+			System.out.println(chEls.size());
+			for(Node a : chEls){
+				System.out.println("||"+a.toString());
+			}
+			//System.out.println(name + " "+ size);
+		}
+		
+		
+//		System.out.println(doc.html());
+		
+//		int a= 0 ;
+//		if(a == 0){
+//			return;
+//		}
+//		
+		
+		
+>>>>>>> origin/master
 //		Catch4493 c = new Catch4493("http://www.4493.com/wangluomeinv/28247/1.htm");
 //		c.doLoop();
 		
