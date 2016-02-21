@@ -441,4 +441,12 @@ public class BaseUtil {
 		return content.toString();
 	}
 	
+	
+	public static void stop() throws Exception{
+		
+		throw new Exception();
+		
+	}
+	
+	
 }

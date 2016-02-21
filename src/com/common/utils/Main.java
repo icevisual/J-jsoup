@@ -1,12 +1,5 @@
 package com.common.utils;
 
-<<<<<<< HEAD
-public class Main {
-
-	public static void main(String[] args) throws Exception {
-		CatchPageXiuna c = new CatchPageXiuna();
-		c.doloop();
-=======
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -178,6 +171,5 @@ public class Main {
 			server.close(); // 关闭ServerSocket
 		}
 
->>>>>>> origin/master
 	}
 }
