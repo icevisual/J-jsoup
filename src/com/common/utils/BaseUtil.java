@@ -43,7 +43,7 @@ public class BaseUtil {
 		return connect(pageUrl,1);
 	}
 
-	protected void mkPath(String path) {
+	public static void mkPath(String path) {
 		File dir = new File(path);
 		File tmp = null;
 		path = path.replaceAll("\\\\", "/");
@@ -371,6 +371,10 @@ public class BaseUtil {
 		if("".equals(fileName)){
 			fileName = getTBRName()+"."+sExt;
 		}
+		File dir = new File(filePath);
+		if(!dir.exists()){
+			mkPath(filePath);
+		}
 		if(!fileName.endsWith("."+sExt)){
 			fileName = fileName.substring(0,fileName.lastIndexOf(".")+1)+sExt;
 		}
@@ -436,5 +440,13 @@ public class BaseUtil {
 		}
 		return content.toString();
 	}
+	
+	
+	public static void stop() throws Exception{
+		
+		throw new Exception();
+		
+	}
+	
 	
 }
